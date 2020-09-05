@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <h1 class="list-header">All users</h1>
+
+    <table class="list">
+        <thead class="list-table-header">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Phone number</th>
+                <th>Street</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Post code</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="list-table-body">
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.phoneNumber }}</td>
+                <td>{{ user.address.street }}</td>
+                <td>{{ user.address.country }}</td>
+                <td>{{ user.address.city }}</td>
+                <td>{{ user.address.postCode }}</td>
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}" class="action-button show">Show</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}" class="action-button edit">Edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">No records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_new') }}" class="create-button">Create new</a>
+{% endblock %}
