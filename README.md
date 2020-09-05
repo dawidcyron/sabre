@@ -4,7 +4,7 @@ To run this project you need:
 * PHP 7.2.5 or higher
 * Composer
 * Node.js and NPM
-* MariaDB database
+* MariaDB database (set your MariaDB version at the end of the DATABASE_URL variable)
 * Symfony CLI
 
 After cloning the project navigate to the root project directory and modify the .env file.
