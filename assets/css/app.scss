@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+
+    .container {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        .show-table {
+            tr {
+                th {
+                    padding-right: 2rem;
+                }
+            }
+        }
+
+        .list {
+            .list-table-header {
+                tr {
+                    th {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        padding: 0 2rem;
+                        text-align: center;
+                    }
+                }
+            }
+            .list-table-body {
+                tr {
+                    td {
+                        font-weight: normal;
+                        font-size: 1rem;
+                        padding: 1rem 2rem;
+                        text-align: center;
+
+                        .action-button {
+                            background-color: #7757FF;
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.5rem 1rem;
+                            border-radius: 0.5rem;
+                            font-weight: bold;
+                            margin-right: 1rem;
+                        }
+                        .edit {
+                            background-color: #47F5E2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .create-button {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: bold;
+            background-color:#9AF553;
+            align-self: flex-start;
+            border-radius: 0.5rem;
+        }
+
+        .back-to-list {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: bold;
+            background-color: #FFC757;
+            align-self: flex-start;
+            border-radius: 0.5rem;
+            color: white;
+            margin-top: 1rem;
+        }
+
+        .edit-button {
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: bold;
+            background-color: #47F5E2;
+            align-self: flex-start;
+            border-radius: 0.5rem;
+            color: white;
+            margin-top: 1rem;
+        }
+
+        .list-header{
+            text-align: center;
+        }
+
+        form {
+            #user {
+                ul {
+                    list-style: none;
+                    color: #E85A5F;
+                }
+
+                div {
+                    margin-top: 1rem;
+
+                    label {
+                        padding-right: 1rem;
+                    }
+                }
+            }
+
+            .save-button {
+                border: none;
+                background-color: #9AF553;
+                padding: 0.75rem 1.5rem;
+                font-weight: bold;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .delete-button {
+                border: none;
+                background-color: #E85A5F;
+                padding: 0.75rem 1.5rem;
+                font-weight: bold;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+                color: white;
+            }
+        }
+    }
+}
